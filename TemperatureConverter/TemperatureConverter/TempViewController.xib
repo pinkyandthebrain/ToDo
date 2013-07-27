@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="celsiusField" destination="11" id="yad-1C-HQb"/>
                 <outlet property="convertButton" destination="12" id="3Zh-sr-dkG"/>
-                <outlet property="fahrenhiteField" destination="10" id="hqg-bF-fHl"/>
+                <outlet property="fahrenheitField" destination="10" id="Nn9-5T-mDp"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fahrenhite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4">
-                    <rect key="frame" x="26" y="135" width="123" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fahrenheit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4">
+                    <rect key="frame" x="26" y="135" width="123" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,7 +32,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" id="10" userLabel="fahreniteTextField">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" id="10" userLabel="fahrenheitTextField">
                     <rect key="frame" x="193" y="126" width="97" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

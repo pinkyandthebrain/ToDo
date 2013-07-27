@@ -10,7 +10,7 @@
 
 @interface TempViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UITextField *fahrenhiteField;
+@property (nonatomic, weak) IBOutlet UITextField *fahrenheitField;
 @property (nonatomic, weak) IBOutlet UITextField  *celsiusField;
 @property (nonatomic, weak) IBOutlet UIButton *convertButton;
 

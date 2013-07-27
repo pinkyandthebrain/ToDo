@@ -7,6 +7,6 @@
 //
 
 
-#define FAHRENHITE_TAG  0
+#define FAHRENHEIT_TAG  0
 #define CELSIUS_TAG     1
 #define DEBUG_TC        0
