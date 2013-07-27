@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F0973D3717A36761001554C1 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		F0D2DA6917A0768B00459478 /* TemperatureConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D2DA6D17A0768B00459478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F0D2DA6F17A0768B00459478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +90,7 @@
 				F0D2DA8A17A076B900459478 /* TempViewController.h */,
 				F0D2DA8B17A076B900459478 /* TempViewController.m */,
 				F0D2DA8C17A076B900459478 /* TempViewController.xib */,
+				F0973D3717A36761001554C1 /* constants.h */,
 			);
 			path = TemperatureConverter;
 			sourceTree = "<group>";
@@ -284,6 +286,7 @@
 				F0D2DA8917A0768B00459478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
