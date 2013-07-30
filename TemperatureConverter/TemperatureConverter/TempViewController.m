@@ -12,15 +12,12 @@
 
 @interface TempViewController ()
 
+@property (nonatomic, assign) BOOL isFahrenheitField; //keeps track of which field was edited when done was pressed
 - (void) updateValues;
 
 @end
 
 @implementation TempViewController
-{
-@private
-    BOOL isFahrenheitField; //keeps track of which field was edited when done was pressed
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,10 +33,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.fahrenheitField.delegate = (id) self;
-    self.celsiusField.delegate = (id) self;
+    self.fahrenheitField.delegate = self;
+    self.celsiusField.delegate = self;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onDoneButton)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone //target:self action:@selector(onDoneButton)];
     
     [self.convertButton addTarget:self action:@selector(updateValues) forControlEvents:UIControlEventAllTouchEvents];
     
@@ -75,14 +72,14 @@
 #endif
         //pretty format the input
         self.fahrenheitField.text = [NSString stringWithFormat:@"%@ F", self.fahrenheitField.text];
-        isFahrenheitField = TRUE;
+        self.isFahrenheitField = TRUE;
     }else if(textField.tag  == CELSIUS_TAG){
 #if DEBUG_TC
         NSLog(@"Celsius Field");
 #endif
         //pretty format the input
-        self.fahrenheitField.text = [NSString stringWithFormat:@"%@ F", self.fahrenheitField.text];
-        isFahrenheitField = FALSE;
+        self.celsiusField.text = [NSString stringWithFormat:@"%@ C", self.celsiusField.text];
+        self.isFahrenheitField = FALSE;
     }
     
     return YES;
@@ -92,20 +89,15 @@
 
 #pragma mark - Private methods
 
--(void)onDoneButton {
-    [self.view endEditing:YES];
-}
-
-
-//
 
 - (void) updateValues {
     
-    if (isFahrenheitField == FALSE){
+    [self.view endEditing:YES];
+    if (self.isFahrenheitField == FALSE){
         float celsius = [self.celsiusField.text floatValue];
         float tempInFahrenheit = celsius*9/5 + 32 ;
         self.fahrenheitField.text = [NSString stringWithFormat:@"%0.2f F", tempInFahrenheit];
-    }else if(isFahrenheitField == TRUE){
+    }else if(self.isFahrenheitField == TRUE){
         float fahrenheit = [self.fahrenheitField.text floatValue];
         float tempInCelsius = (fahrenheit-32)*5/9 ;
         self.celsiusField.text = [NSString stringWithFormat:@"%0.2f C", tempInCelsius];
