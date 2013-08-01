@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "EditableTableViewCell.h"
 
 @interface ViewController ()
 
@@ -53,7 +54,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"items"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"items"];
+        cell = [[EditableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"items"];
     }
     
     cell.textLabel.text = [self.todoItems objectAtIndex:indexPath.row];
@@ -68,6 +69,13 @@
         [self.todoItems removeObjectAtIndex:indexPath.row];
         [self.todoTable reloadData];
         
+        //Reset the editing style
+        tableView.editing = NO;
+        
+    } else if (editingStyle == UITableViewCellEditingStyleInsert){
+        [self.todoItems insertObject:@" " atIndex:0];
+        
+        
     }
 }
 
@@ -78,12 +86,19 @@
 {
     [self.todoItems insertObject:@"" atIndex:0];
     [self.todoTable reloadData];
-
+    
     
 }
 
 - (void) onEditButton
 {
+    if([self.navigationItem.leftBarButtonItem.title isEqualToString:@"Edit"]){
+        self.todoTable.editing = YES;
+        self.navigationItem.leftBarButtonItem.title = @"Done";
+    }else{
+        self.todoTable.editing = NO;
+        self.navigationItem.leftBarButtonItem.title =@"Edit";
+    }
     
 }
 

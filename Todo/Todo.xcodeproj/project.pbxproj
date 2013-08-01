@@ -21,6 +21,7 @@
 		F0EEB30417AA37B100EFD15D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EEB2E617AA37B100EFD15D /* UIKit.framework */; };
 		F0EEB30C17AA37B100EFD15D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0EEB30A17AA37B100EFD15D /* InfoPlist.strings */; };
 		F0EEB30E17AA37B100EFD15D /* TodoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EEB30D17AA37B100EFD15D /* TodoTests.m */; };
+		F0EEB31917AB11A000EFD15D /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EEB31817AB116700EFD15D /* EditableTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F0EEB30917AA37B100EFD15D /* TodoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TodoTests-Info.plist"; sourceTree = "<group>"; };
 		F0EEB30B17AA37B100EFD15D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0EEB30D17AA37B100EFD15D /* TodoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTests.m; sourceTree = "<group>"; };
+		F0EEB31717AB116700EFD15D /* EditableTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditableTableViewCell.h; sourceTree = "<group>"; };
+		F0EEB31817AB116700EFD15D /* EditableTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		F0EEB2E817AA37B100EFD15D /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				F0EEB31717AB116700EFD15D /* EditableTableViewCell.h */,
+				F0EEB31817AB116700EFD15D /* EditableTableViewCell.m */,
 				F0EEB2F117AA37B100EFD15D /* AppDelegate.h */,
 				F0EEB2F217AA37B100EFD15D /* AppDelegate.m */,
 				F0EEB2F417AA37B100EFD15D /* Main.storyboard */,
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EEB31917AB11A000EFD15D /* EditableTableViewCell.m in Sources */,
 				F0EEB2F917AA37B100EFD15D /* ViewController.m in Sources */,
 				F0EEB2F317AA37B100EFD15D /* AppDelegate.m in Sources */,
 				F0EEB2EF17AA37B100EFD15D /* main.m in Sources */,
