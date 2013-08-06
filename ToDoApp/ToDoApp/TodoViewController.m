@@ -176,6 +176,7 @@
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     
     self.todoItems[0] = textField.text;
+    self.navigationItem.rightBarButtonItem.enabled = YES;
     
     [textField resignFirstResponder];
     
@@ -183,6 +184,21 @@
     
 }
 
+- (BOOL) textFieldShouldEndEditing:(UITextField *)textField {
+    self.todoItems[0] = textField.text;
+    //Disable the add button so you don't get into a funky state. Add an improvement to save the current item and add a new row at the top
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    return YES;
+}
 
 #pragma mark - Private methods
 
