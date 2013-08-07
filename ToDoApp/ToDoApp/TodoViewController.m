@@ -99,6 +99,7 @@
     
     cell.textField.text = [self.todoItems objectAtIndex:indexPath.row];
     cell.textField.delegate = self;
+    cell.textField.tag = indexPath.row;
    
     
    return cell;
@@ -177,7 +178,7 @@
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     
-    self.todoItems[0] = textField.text;
+    self.todoItems[textField.tag] = textField.text;
     self.navigationItem.rightBarButtonItem.enabled = YES;
     
     [textField resignFirstResponder];
@@ -187,7 +188,7 @@
 }
 
 - (BOOL) textFieldShouldEndEditing:(UITextField *)textField {
-    self.todoItems[0] = textField.text;
+    self.todoItems[textField.tag] = textField.text;
     //Disable the add button so you don't get into a funky state. Add an improvement to save the current item and add a new row at the top
     self.navigationItem.rightBarButtonItem.enabled = YES;
     
