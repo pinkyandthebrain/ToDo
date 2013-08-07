@@ -71,14 +71,14 @@
 
 #pragma mark - Table view data source
 
-/*
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
- */
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -91,7 +91,8 @@
 {
     EditableTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditableTableViewCell"];
     
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[EditableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EditableTableViewCell"];
     }
     
@@ -116,7 +117,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         //add code here for when you hit delete
         [self.todoItems removeObjectAtIndex:indexPath.row];
-        [self.todoTable reloadData];
+        [tableView reloadData];
         
         //Reset the editing style
         tableView.editing = NO;
