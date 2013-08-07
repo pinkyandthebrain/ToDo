@@ -93,7 +93,8 @@
     
     if (cell == nil)
     {
-        cell = [[EditableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EditableTableViewCell"];
+      //  This is not needed in iOS7 (because we are registering with Nib)
+      //  cell = [[EditableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EditableTableViewCell"];
     }
     
     cell.textField.text = [self.todoItems objectAtIndex:indexPath.row];
@@ -124,7 +125,7 @@
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert){
         [self.todoItems insertObject:@" " atIndex:0];
-        [self.todoTable reloadData];
+        [tableView reloadData];
         
         
     }
