@@ -45,7 +45,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"TODO";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(onAddButton)];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(onEditButton)];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(onEditButton)];
     //self.todoItems = @[@"Tap the + button to add items", @"Swipe to delete", @"Tap edit button to bulk delete"];
     if(self.todoItems == nil)
     {
@@ -234,6 +235,13 @@
     }
     
 }
+
+- (void) setEditing:(BOOL)editing animated:(BOOL)animated{
+    
+    
+    [self.tableView setEditing:editing animated:YES];
+}
+
 
 
 
